@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="web 学习从零开始">
+        <meta http-equiv="refresh" content="5">
+        <title>第三个</title>
+        <link rel="stylesheet" href="./res/css/myStyle1.css">
+        <style>
+            .tac{
+                text-align: center
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="top">链接</h1>
+        <hr>
+        href # 一个<a href="#">空连接</a>
+        <br>
+        连接百度  <a href="http://www.baidu.com">go</a> 记得带着http
+        <br>
+        不带http呢 <a href="//www.baidu.com">baidu</a>  <b>不行！</b>
+        <br>
+        项目内链接  <a href="./html2.html">html2</a>
+        <br>
+        一个图片作为链接 <a href="./html2.html"><img width="60px" src="./res/img/img_exmple.png" alt=""></a>
+        <br>
+        在新窗口打开 target="_blank" <a href="./html1.html" target="_blank">html1</a>
+        <br>
+        <h2>通过 ID 链接</h2>
+        页内跳转？
+        <br>
+        跳转到 #id 的地方 <a href="#top">top</a>
+        <br>
+        跳转到底部 <a href="#bottom">bottom</a>
+        <br>
+        还可以跳转到其他已知页面的地方，比如：
+        <br>
+        跳转到html2的引用 <a href="./html2.html#html2_q">go</a>
+        <hr>
+        <h1>头部 head</h1>
+        head 中可以添加的标签有
+        <code>
+                title、style、meta、link、script、noscript、base                
+        </code>
+        <pre>
+            <code>
+                    &#60;meta http-equiv="refresh" content="30">
+                    <br>
+                    上面配置了页面每30秒刷新一次
+            </code>
+        </pre>
+        <hr>
+        <h1>样式</h1>
+        <hr>
+        <h4 style="text-align:center">1、内联样式</h4>
+        <p style="color:aquamarine;font-weight:500;font-size:20px">比如这样</p>
+        <h4>2、内部样式表</h4>
+        <p class="tac">主要是通过 head 中的 style 标签内部写样式,然后通过class来引入</p>
+        <h4>3、外部样式表</h4>
+        <p class="tar">通过 head 中的 link 标签来引入像下面这样</p>
+        <pre>
+            <code>
+                    &#60;link rel="stylesheet" type="text/css" href="mystyle1.css">
+            </code>
+        </pre>
+    </body>
+</html>
