@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>表格</title>
+        <style>
+        .tac{
+            text-align: center
+        }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center">表格学习</h1>
+        <hr>
+        <table border="1"
+            cellspacing="5"
+            cellpadding="10">
+            <caption>o 标题在这里</caption>
+            <colgroup>
+                <col style="background-color:blue">
+                <col style="background-color: red">
+                <col style="background-color: yellow">
+            </colgroup>
+            <tr >
+                <th>ID</th>
+                <th>绰号</th>
+                <th>名言</th> 
+            </tr>        
+            <tr>
+                <td class="tac">longDD</td>
+                <td>人高马大longdd</td>
+                <td>女王不要B阴影啊！</td>
+            </tr>
+            <tfoot>
+                <td>yang</td>
+                <td>彬彬有礼皮鞋杨</td>
+                <td>CNM,NMB,WCNM!</td>
+            </tfoot>
+            <tr>
+                <td class="tac">hao</td>
+                <td>正人君子陈志豪</td>
+                <td>给我幽鬼不赢砍手！</td>
+            </tr>
+            
+            <tr>
+                <td class="tac">820</td>
+                <td>伶牙俐齿乌溜溜</td>
+                <td>优势不要打盾！</td>
+            </tr>
+            
+
+        </table>
+        <hr>
+        <table border="1">
+            <caption>跨列</caption>
+            <tr>
+                <th>ID</th>
+                <th colspan="2">成名英雄</th>
+            </tr>
+            <tr>
+                <td>YYF</td>
+                <td>风暴之灵</td>
+                <td>熊猫酒仙</td>
+            </tr>
+        </table>
+        <hr>
+        <table border="1">
+            <caption>跨列</caption>
+            <tr>
+                    <th>ID</th>
+                    <td>430</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">绰号</th>
+                    <td>大妈</td>
+                </tr>
+                <tr>
+                    <td>钢琴手</td>
+                </tr>
+        </table>
+        <hr>
+        <table border="1">
+            <caption>行内标签</caption>
+            <tr>
+                <td>
+                    <p>段落一</p>
+                    <img width="30px" height="20px" src="../res/img/img_exmple.png" alt="">
+                </td>
+                <td>
+                    <table border="2">
+                        <caption>表格</caption>
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                        </tr>
+                        <tr>
+                            <td>单元1</td>
+                            <td>单元2</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    列表
+                    <ul>
+                        <li>轻声细语老队长</li>
+                        <li>有情有义下面八</li>
+                        <li>勤学苦练MMY</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
