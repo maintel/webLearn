@@ -1,0 +1,71 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="charset" content="utf-8">
+        <title>from表单</title>
+    </head>
+    <body>
+       <h1>表单学习</h1>
+       <label for="">一个 label</label>
+       <form action="">
+           ID：<input type="text" name="" id=""/>
+           <br>
+           英雄：<input type="text">
+       </form>
+       <form action="">
+           密码: <input type="password" name="" id="">
+       </form>
+       <p>请选择阵营</p>
+       <form action="">
+            <input type="radio" name="zy" id="" value="jw"> 近卫<br>
+            <input type="radio" name="zy" id="" value="tz"> 天灾
+       </form>
+       <p><b>Tips：</b>只有 name 属性一致才能是单选</p>
+       <hr>
+       <form action="">
+            <fieldset>
+                <legend>请选择英雄</legend>
+                    <input type="checkbox" name="yx" id=""> 风暴之灵 <br>
+                    <input type="checkbox" name="yxs"> 灰烬之灵 <br>
+                    <input type="checkbox" name="yx"> 大地之灵
+            </fieldset>
+       </form>
+       <hr>
+       <p>提交表单</p>
+       <form action="https://api.github.com/users" method="get">
+        输入Github用户名：<input type="text" name="username"><br>
+        <input type="submit" value="Submit">
+        </form>
+        <hr>
+        <p>下拉框</p>
+        <select name="" id="">
+            <option value="DS">黑暗贤者</option>
+            <option value="SS" selected>风暴之灵</option>
+            <option value="DK">混沌骑士</option>
+        </select>
+        <p>选择一个英雄</p>
+        <select name="" id="">
+            <optgroup label="智力英雄">
+                    <option value="SS" selected>风暴之灵</option>
+                    <option value="TS">受折磨的灵魂</option>
+            </optgroup>
+                <option value="DS">黑暗贤者</option>
+               
+                <option value="DK">混沌骑士</option>
+            </select>
+        <hr>
+        <p>文本域</p>
+        <textarea rows="3" cols="50" placeholder="请输入"></textarea>
+        <p>按钮</p>
+        <input type="button" value="😯按钮">
+        <hr>
+        <p>来发一个电子邮件吧</p>
+        <form action="MAILTO:maintel@163.com" method="POST" enctype="text/plain">
+            邮箱：<input type="text" name="name"><br>
+            正文：<textarea name="content" id="" cols="30" rows="10"></textarea>
+            <br>
+            日期：<input type="date" name="日期" id="">
+            <input type="submit" value="发送">
+        </form>
+    </body>
+</html>
