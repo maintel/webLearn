@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="charset" content="utf-8">
+        <title>css学习</title>
+        <link rel="stylesheet" href="../res/css/myStyle1.css">
+        <style>
+            p.center{
+                text-align: center
+            }
+            .tac{
+                text-align: center
+            }
+            .tLineUp{
+                letter-spacing: 3px;
+                line-height: 250%;
+            }
+            .trtl{
+                direction: rtl;
+                text-align: left
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS 学习</h1>
+        <hr>
+        <p class="center">CSS声明总是以分号(;)结束，声明组以大括号({})括起来:</p>
+        <p>可以使用 ID 和 class 选择器</p>
+        <b>引用 CSS 的方法有三种</b>
+        <ul>
+            <li>外部样式表</li>
+            <li>内部样式表</li>
+            <li>内联样式</li>
+        </ul>
+        <p class="tar tac" style="text-align:left">样式</p>
+        <h3>CSS 的优先级</h3>
+        <p><b>以下优先级由高到低</b></p>
+        <ol class="bgBlue">
+            <li>内联样式表</li>
+            <li>内部样式表</li>
+            <li>外部样式表</li>
+            <li>缺省样式</li>
+        </ol>
+        <h3>文本相关样式</h3>
+        <hr>
+        <p class="tdTop">顶部横线可以这样做</p>
+        <p class="tdDel">删除线可以这样</p>
+        <p class="tdBot">下划线</p>
+        <div class="borRed">
+            <p class="textIn">可以指定一个段落中全部是大写或者小写</p>
+            <p class="uppercase">this is dota</p>
+            <p class="lowercase">THIS is DOTA</p>
+            <p class="capitalize">this is dota</p>            
+        </div>
+        <b class="tLineUp">this is dota <br> 控制字符与行距<br>控制字符与行距</b>
+        <p class="trtl">左向右从句话这</p>
+        <p style="word-spacing:20px">this is dota</p>
+    </body>
+</html>

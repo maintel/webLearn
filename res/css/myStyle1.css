@@ -2,3 +2,41 @@
 .tar{
     text-align: right
 }
+
+.bgBlue{
+    background-color: rgb(82, 178, 243)
+}
+
+.tdTop{
+    text-decoration: overline;
+    text-decoration-color: #00ccff;
+}
+
+.tdDel{
+    text-decoration: line-through;
+    text-decoration-color: #fa293b
+}
+
+.tdBot{
+    text-decoration: underline;
+}
+
+.borRed{
+    border: #fa293b solid
+}
+
+.textIn{
+    text-indent: 20px;
+}
+
+.uppercase{
+    text-transform: uppercase
+}
+
+.lowercase{
+    text-transform: lowercase
+}
+
+.capitalize{
+    text-transform: capitalize
+}

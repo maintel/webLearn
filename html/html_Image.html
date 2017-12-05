@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>图片</title>
-        <style>
-        .imgMi{
+
+<head>
+    <meta charset="UTF-8">
+    <title>图片</title>
+    <style>
+        .imgMi {
             vertical-align: middle
         }
-        .imgTop{
+
+        .imgTop {
             vertical-align: top
         }
-        </style>
-    </head>
-    <body>
-        <p>
-            本例学习图片相关<br>
-            如何加载图片就不说了
-        </p>
-        <h4>排列图像</h4>
-        <p><b>底部对齐（默认）</b>一张图片<img src="../res/img/img_exmple.png" width="96px" height="auto" alt="tu">在这里</p>
-        <p><b>居中对齐</b>一张图片<img src="../res/img/img_exmple.png" width="96px" height="auto" align="middle" alt="tu">在这里</p>
-        <p><b>顶部对齐</b>一张图片<img src="../res/img/img_exmple.png" width="96px" height="auto" align="top" alt="tu">在这里</p>   
-        <p>html5 中已经不支持 align 属性 应当用 css 来代替</p>
-        <p><b>底部对齐（默认）</b>一张图片<img src="../res/img/img_exmple.png" width="96px" height="100px" alt="tu">在这里</p>
-        <p><b>居中对齐</b>一张图片<img class="imgMi" src="../res/img/img_exmple.png" width="96px" height="100px" alt="tu">在这里</p>
-        <p><b>顶部对齐</b>一张图片<img class="imgTop" src="../res/img/img_exmple.png" width="96px" height="100px" alt="tu">在这里</p>
-        
-        <h4>浮动</h4>
-        <p><b>浮动在左边</b>一张图片<img src="../res/img/img_exmple.png" width="96px" height="auto" style="float:left" alt="tu">在左边</p>
-        <p><b>浮动在右边</b>一张图片<img src="../res/img/img_exmple.png" width="96px" height="auto" style="float:right" alt="tu">在右边</p> 
-        
-        <h4>图像映射</h4>
-        <img src="../res/img/img_exmple.png" alt="示例" usemap="#exmple">
+    </style>
+</head>
 
-        <map name="exmple">
-            <area shape="rect" coords="60,70,180,180" href="http://www.baidu.com" target="_blank" alt="baidu">
-            <area shape="circle" coords="350,120,50" href="http://www.baidu.com" target="_blank" alt="baidu">
-        </map>
-        <pre>
+<body>
+    <p>
+        本例学习图片相关
+        <br> 如何加载图片就不说了
+    </p>
+    <h4>排列图像</h4>
+    <p>
+        <b>底部对齐（默认）</b>一张图片
+        <img src="../res/img/img_exmple.png" width="96px" height="auto" alt="tu">在这里</p>
+    <p>
+        <b>居中对齐</b>一张图片
+        <img src="../res/img/img_exmple.png" width="96px" height="auto" align="middle" alt="tu">在这里</p>
+    <p>
+        <b>顶部对齐</b>一张图片
+        <img src="../res/img/img_exmple.png" width="96px" height="auto" align="top" alt="tu">在这里</p>
+    <p>html5 中已经不支持 align 属性 应当用 css 来代替</p>
+    <p>
+        <b>底部对齐（默认）</b>一张图片
+        <img src="../res/img/img_exmple.png" width="96px" height="100px" alt="tu">在这里</p>
+    <p>
+        <b>居中对齐</b>一张图片
+        <img class="imgMi" src="../res/img/img_exmple.png" width="96px" height="100px" alt="tu">在这里</p>
+    <p>
+        <b>顶部对齐</b>一张图片
+        <img class="imgTop" src="../res/img/img_exmple.png" width="96px" height="100px" alt="tu">在这里</p>
+
+    <h4>浮动</h4>
+    <p>
+        <b>浮动在左边</b>一张图片
+        <img src="../res/img/img_exmple.png" width="96px" height="auto" style="float:left" alt="tu">在左边</p>
+    <p>
+        <b>浮动在右边</b>一张图片
+        <img src="../res/img/img_exmple.png" width="96px" height="auto" style="float:right" alt="tu">在右边</p>
+
+    <h4>图像映射</h4>
+    <img src="../res/img/img_exmple.png" alt="示例" usemap="#exmple">
+
+    <map name="exmple">
+        <area shape="rect" coords="60,70,180,180" href="http://www.baidu.com" target="_blank" alt="baidu">
+        <area shape="circle" coords="350,120,50" href="http://www.baidu.com" target="_blank" alt="baidu">
+    </map>
+    <pre>
             shape="rect"  coords="0,0,100,50" 分别是 左上（x、y）右下（x、y）
             shape="circle coords="350,120,50"  分别是 坐标中心（x、y） 半径
         </pre>
-    </body>
+</body>
+
 </html>
