@@ -40,3 +40,19 @@
 .capitalize{
     text-transform: capitalize
 }
+
+.aTop{
+    vertical-align: text-top;
+}
+
+.aMin{
+    vertical-align: middle;
+}
+
+.aBot{
+    vertical-align: text-bottom;
+}
+
+.textSha{
+    text-shadow: -2px -2px #00ccff
+}

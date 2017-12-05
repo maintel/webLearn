@@ -19,6 +19,24 @@
                 direction: rtl;
                 text-align: left
             }
+            a:link{
+                border: #1178ff 2px solid;
+                background-color: #1178ff;
+                color: #ff00ff
+            }
+            a:vertical{
+                border: #1178ff 2px solid;
+                background-color: #1178ff;
+                color: #ff00ff
+            }
+            a:hover{
+                border: #fbff00 2px solid;
+                background-color: #fbff00;
+                color: #fbff00
+            }
+            a:active{
+                color: #1178ff
+            }
         </style>
     </head>
     <body>
@@ -55,5 +73,15 @@
         <b class="tLineUp">this is dota <br> 控制字符与行距<br>控制字符与行距</b>
         <p class="trtl">左向右从句话这</p>
         <p style="word-spacing:20px">this is dota</p>
+        <hr>
+        <h3 class="textSha">文字对齐图片</h3>
+        <p>主要是用到了vertival-align属性</p>
+        <p>这个图片 <img src="../res/img/img_exmple2.png" width="100px" height="50px" alt=""> 默认对齐</p>
+        <p>这个图片 <img  class="aTop" src="../res/img/img_exmple2.png" width="100px" height="50px" alt=""> 顶部对齐</p>
+        <p>这个图片 <img  class="aMin" src="../res/img/img_exmple2.png" width="100px" height="50px" alt=""> 居中对齐</p>
+        <p>这个图片 <img  class="aBot" src="../res/img/img_exmple2.png" width="100px" height="50px" alt=""> 底部对齐</p>  
+        <hr>
+        <h3>高级连接</h3>    
+        <a href="http://www.baidu.com">百度一下，你就知道</a>  
     </body>
 </html>
