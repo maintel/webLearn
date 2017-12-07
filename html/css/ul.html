@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>列表样式学习</title>
+    <link rel="stylesheet" type="text/css" href="../../res/css/myStyle1.css">
+    <link rel="stylesheet" href="../../res/css/common.css">
+    <style>
+    .lstRoman{list-style-type: lower-roman}
+    .lstSuqare{list-style-type: square}
+    </style>
+</head>
+
+<body style="margin:0 10% 0 10%">
+    <h2 class="tac mClear w100 topAlign ptb10 bg666">本页面主要学习列表样式</h2>
+    <p class="mt60">
+        列表 - ul
+        <br> 默认样式如下
+    </p>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    <h4>系统自带样式</h4>
+    <p>利用 list-style-type 属性来执行列表的标记类型，如下：列表嵌套列表</p>
+    <ul>
+        <li> 空心圆点 Circle
+            <ul class="lstCircle">
+                <li>list-style-type:Circle</li>
+                <li>list-style-type:Circle</li>
+            </ul>
+        </li>
+        <li> 罗马文字
+            <ul class="lstRoman">
+                <li>list-style-type: lower-roman</li>
+                <li>list-style-type: lower-roman</li>
+                <li>list-style-type: lower-roman</li>
+            </ul>
+        </li>
+        <li> 实心方块
+                <ul class="lstSuqare">
+                    <li>list-style-type: lower-roman</li>
+                    <li>list-style-type: lower-roman</li>
+                </ul>
+            </li>
+    </ul>
+    <p>也可以分别对条目指定样式：</p>
+    <ul>
+        <li style="list-style-type:none">none 无标记</li>
+        <li style="list-style-type:disc">disc 实心圆（默认）</li>
+        <li style="list-style-type:circle">circle 空心圆</li>
+        <li style="list-style-type:square">square 实心方块</li>
+        <li style="list-style-type:decimal">decimal 数字</li>
+        <li style="list-style-type:decimal-leading-zero">decimal-leading-zero 0开头的数字标记</li>
+        <li style="list-style-type:lower-roman">lower-roman 小写罗马数字</li>
+        <li style="list-style-type:disc">。。。</li>
+    </ul>
+</body>
+
+</html>

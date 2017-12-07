@@ -1,0 +1,21 @@
+/* 公共CSS样式 */
+
+/* 行高类 */
+.lh{line-height: 30px}
+
+/* margin类 */
+.mClear{margin: 0}
+.mt10{margin-top: 10px}
+.mtb10{margin-top: 10px;margin-bottom: 10px}
+.mt60{margin-top: 60px}
+
+/* padding类 */
+.ptb10{padding-top: 10px;padding-bottom: 10px}
+
+/* 宽度 */
+.w100{width: 100%}
+
+/* 背景 */
+.bg666{background-color: #666666}
+
+.topAlign{top: 0;left: 0; position: fixed;}
