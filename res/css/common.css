@@ -1,5 +1,11 @@
 /* 公共CSS样式 */
 
+a{text-decoration: none}
+
+body{margin:0 10% 40px 10%;color:darkgray;padding-top: 60px}
+
+table,th,td{border-collapse: collapse}
+
 /* 行高类 */
 .lh{line-height: 30px}
 
@@ -8,14 +14,44 @@
 .mt10{margin-top: 10px}
 .mtb10{margin-top: 10px;margin-bottom: 10px}
 .mt60{margin-top: 60px}
+.mr30{margin-right: 30px}
+.ml30{margin-left: 30px}
 
 /* padding类 */
 .ptb10{padding-top: 10px;padding-bottom: 10px}
 
 /* 宽度 */
 .w100{width: 100%}
+.w400p{width: 400px;}
+.w100p{width: 100px;}
+
+/* 高度 */
+.h300p{height: 300px}
+.h200p{height: 200px}
+.h100p{height: 100px}
 
 /* 背景 */
+.bgfff{background-color: #ffffff}
 .bg666{background-color: #666666}
+.bg333{background-color: #333333}
 
+/* 边框 */
+.bor{border:#666666 1px solid }
+.borBlue{border: #00b7ff 1px solid}
+.borofd{border: #00ffdd 1px solid}
+
+/* 绝对定位居于顶部 */
 .topAlign{top: 0;left: 0; position: fixed;}
+
+/* 一个按钮 */
+.btn1{
+    border: #00ccff 1px solid;
+    border-radius: 2px;
+    display: inline;
+    background: #00ccff;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: 2px 2px 10px #888888;
+}

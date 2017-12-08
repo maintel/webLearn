@@ -1,0 +1,76 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>表格学习</title>
+    <link rel="stylesheet" type="text/css" href="../../res/css/myStyle1.css">
+    <link rel="stylesheet" href="../../res/css/common.css">
+    <link rel="stylesheet" href="../../res/css/table_html_css.css">
+    <style>
+    .lstRoman{list-style-type: lower-roman}
+    .lstSuqare{list-style-type: square}
+    </style>
+</head>
+
+<body>
+    <h2 class="tac mClear w100 topAlign ptb10 bg666">表格样式学习</h2>
+    
+    <p>表格 table ，使用css可以对表格进行美化，说实话系统的表格真丑</p>
+    <p>可以使用表格来实现一些布局不过我觉得没有 flex 好用，如下：</p>
+    <h4>边框</h4>
+    <table style="border:none;width:100%">
+        <caption style="caption-side:bottom">表 1.1 边框</caption>
+        <tr>
+            <td style="border:none;width:50%">
+                    <p>指定表格的边框使用 border 属性</p>
+                    <p>下面这一个是统一指定了边框</p>
+                    <table style="border-collapse:initial">
+                        <tr>
+                            <th>标题</th>
+                            <th>标题2</th>
+                        </tr>
+                        <tr>
+                            <td>内容</td>
+                            <td>内容2</td>
+                        </tr>
+                    </table>
+            </td>
+            <td style="border:none;width:50%">
+                    <p>然后折叠边框，比较左边的区别</p>
+                    <table class="borcollapse">
+                        <tr>
+                            <th>标题</th>
+                            <th>标题2</th>
+                        </tr>
+                        <tr>
+                            <td>内容</td>
+                            <td>内容2</td>
+                        </tr>
+                    </table>
+            </td>
+        </tr>
+    </table>
+    <p>如上还可以通过 caption-side 指定标题的位置</p>
+    <p>其他如对齐方式、背景、填充等等和文本等并无区别</p>
+    
+
+ 
+
+
+    <div class="tac mt10">
+        <a class="btn1 mr30" href="javascript:void()" onclick="goLast()">上一篇 列表</a>
+        <a class="btn1 ml30" href="javascript:void()" onclick="goNext()">下一篇 定位</a>
+    </div>
+</body>
+
+<script>
+    function goNext(){
+        location.href = "./position.html"
+    }
+    function goLast(){
+        location.href = "./ul.html"
+    }
+</script>
+
+</html>

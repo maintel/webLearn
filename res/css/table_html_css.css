@@ -1,0 +1,5 @@
+/* table.html 页面使用的样式 */
+
+table,th,td{border: black 1px solid}
+.blackBor{border: black 1px solid}
+.borcollapse{border-collapse: collapse}

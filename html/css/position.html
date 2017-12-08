@@ -1,0 +1,89 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>定位</title>
+    <link rel="stylesheet" type="text/css" href="../../res/css/myStyle1.css">
+    <link rel="stylesheet" href="../../res/css/common.css">
+    <link rel="stylesheet" href="../../res/css/position_html_css.css">
+    <style>
+    td{border: #999999 1px solid;padding: 3px}
+    </style>
+</head>
+
+<body>
+    <h2 class="tac mClear w100 topAlign ptb10 bg666">定位 position 属性学习</h2>
+    <p>position 属性指定一个元素的定位类型，有以下几种属性值</p>
+    <table class="bor">
+        <tr class="bg333">
+            <th>值</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>absolute</td>
+            <td>绝对定位，相对于 static 定位以外的第一个父元素进行定位。</td>
+        </tr>
+        <tr>
+            <td>fixed</td>
+            <td>绝对定位，相对于浏览器窗口</td>
+        </tr>
+        <tr>
+            <td>relative</td>
+            <td>相对定位，相对于其正常位置进行定位</td>
+        </tr>
+        <tr>
+            <td>static</td>
+            <td>默认值</td>
+        </tr>
+        <tr>
+            <td>inherit</td>
+            <td>规定应该从父元素继承 position 属性的值</td>
+        </tr>
+    </table>
+    <h4>static 默认定位</h4>
+    <p>static 是默认定位，按照浏览器的默认值对元素进行排版</p>
+    <h4>relative 相对定位</h4>
+    <div class="borBlue">
+        <p>相对于其正常位置进行定位，如果不进行特殊配置和 static 并无区别</p>
+    </div>
+    <div class="borBlue bgfff reltr">
+        <p>设置了relative 属性 并设置了top = -20 和 left = 20 </p>
+    </div>
+    <h4>fixed 绝对定位</h4>
+    <p>一个固定定位（position属性的值为fixed）元素会相对于视窗来定位，这意味着即便页面滚动，它还是会停留在相同的位置。和 relative 一样， top 、 right 、 bottom 和 left 属性都可用。</p>
+    <div class="fixedBR">
+        绝对定位
+    </div>
+    <p>可以看到右下角的一个浮动窗口，随着页面滑动一直定位在右下角,同样的还有顶部的标题栏，它也会随着窗口滑动固定在顶部</p>
+    <p>一个固定定位元素不会保留它原本在页面应有的空隙即<b>脱离文档流</b>。</p>
+    <h4>absolute 绝对定位</h4>
+    <p>absolute 不同于 fixed 的地方在于他们相对的内容不一样，absolute 是相对于 static 定位以外的第一个父元素进行定位，如果没有就是相对于 body。如下：</p>
+    <div class="rell borBlue w400p h200p">
+        这个div 向左偏移了 50px。
+        <div class="abRB borofd w100p h100p bgfff"> 
+            相对于它的父元素进行了定位
+        </div>
+    </div>
+    <div class="borBlue w400p h200p">
+        这个 div 没有指定 position
+        <div class="abRB borofd w100p h100p bgfff"> 
+            相对于 body 进行了定位
+        </div>
+    </div>
+    <div class="tac mt10">
+        <a class="btn1 mr30" href="javascript:void()" onclick="goLast()">上一篇 表格</a>
+        <a class="btn1 ml30" href="javascript:void()" onclick="goNext()">下一篇 填入内容</a>
+    </div>
+</body>
+
+<script>
+    function goNext(){
+        location.href = "./table.html"
+    }
+    function goLast(){
+        location.href = "./table.html"
+    }
+</script>
+
+</html>

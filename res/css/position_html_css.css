@@ -1,0 +1,29 @@
+/* position.html 使用样式表 */
+
+.reltr{
+    position: relative;
+    left: 20px;
+    top: -20px;
+}
+
+.fixedBR{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: #f70d0d 2px solid;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: #44ff44;
+    background-color: #ffffff;
+}
+
+.rell{
+    position: relative;
+    left: -50px;
+}
+
+.abRB{
+    position: absolute;
+    right: 0;
+}
