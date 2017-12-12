@@ -34,7 +34,7 @@
         <p>如果有多个元素都有浮动属性，它们彼此相邻</p>
     </div>
     <p><b style="color:red">注意：</b>float 会使元素脱离正常的文档布局流，并粘贴到其父容器的左侧，如上边，div的实际高度是文字所占据的高度，当调整浏览器的窗口时图片可能突破包裹它div的高度，
-    这时候可以为div设置 display:inline-block </p>
+    在后面问题列表中会解决此问题 </p>
     <h4>首字下沉特效</h4>
     <p>可以通过 float 属性来实现首字下沉特效如下</p>
     <div class="borBlue w100">
@@ -71,7 +71,7 @@
         </div>
     </div>
     <p><b>注意：</b>如果将上面的中间列表的 float 更改为 right 就会看到div的顺序为<br></p>
-    <p class="p5p bg666 mt10 wMax borLBlue">div1 div3 div2</p>
+    <p class="p5 bg666 mt10 wMax borLBlue">div1 div3 div2</p>
     <p> 这是因为第二个div的源码顺序上比第三个要高,DOM 上第二个div先出现并先声明了 float:right,所以浮动顺序上也会比第三个要高所以先出现在右侧
     </p>
     <hr>

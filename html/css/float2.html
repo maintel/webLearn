@@ -6,14 +6,93 @@
     <title>float</title>
     <link rel="stylesheet" type="text/css" href="../../res/css/myStyle1.css">
     <link rel="stylesheet" href="../../res/css/common.css">
+    <link rel="stylesheet" href="../../res/css/float_html_css.css">
     <style>
-
+        b{color: red}
     </style>
 </head>
 
 <body>
     <h2 class="tac mClear w100 topAlign ptb10 bg666">float学习2——浮动带来的问题</h2>
-    
+    <h3>三列布局</h3>
+    <div class="w100 borBlue inliBlo mAuto">
+        <div class="thrColu p2p borRed">
+            <h4>左侧列表 div1</h4>
+            <p><b>float:left</b>请检查您的代理服务器设置或与网络。</p>
+        </div>
+         <div class="thrColu">
+            <h4>中间列表 div2</h4>
+            <p><b>float:left</b>请检查您的代理服务器设置或与网络</p>
+        </div>
+        <div class="thrColu">
+            <h4>右侧列表 div3</h4>
+            <p><b>float:right</b>请检查您的代理服务器设置或与网</p>
+        </div>
+    </div>
+    <h4>宽度难以计算</h4>
+    <p>在上一个页面没有设置padding等样式，如果给上面列表div1设置了padding:2%,可以看到它虽然还是三列 但是 div3 已经跑到下面去了，这是因为
+        默认的宽度计算方式是 width+content+border+margin 所以现在的宽度为32%*3+2%+2%+2%=102%已经大于100%了。
+    </p>
+    <p><strong>解决办法:</strong>给html或者这些元素设置box-sizing: border-box;这会将宽度的计算方式设置为content + padding + border，如果增加了padding等，它会压缩原本的内容宽度来保证总宽度不变</p>    
+    <div class="w100 borBlue inliBlo mAuto">
+        <div class="thrColu p2p borRed" style="box-sizing:border-box">
+            <h4>左侧列表 div1</h4>
+            <p><b>float:left</b>请检查您的代理服务器设置或与网络。</p>
+        </div>
+         <div class="thrColu">
+            <h4>中间列表 div2</h4>
+            <p><b>float:left</b>请检查您的代理服务器设置或与网络</p>
+        </div>
+        <div class="thrColu">
+            <h4>右侧列表 div3</h4>
+            <p><b>float:right</b>请检查您的代理服务器设置或与网</p>
+        </div>
+    </div>
+    <p><b>Tips:</b>上面的解决方法一样可以用来解决其他的宽度高度溢出的问题。</p>
+    <h4>高度问题</h4>
+    <p>有时候希望每列的高度都是相同的，但是这个时候就出现了一些问题</p>
+    <div class="w100 borBlue inliBlo mAuto p5">
+        <div class="thrColu2 p2p borRed" style="box-sizing:border-box">
+            <h4>左侧列表 div1</h4>
+            <p><b>float:left</b>请检查您的代理服务器设置或与网络。</p>
+        </div>
+         <div class="thrColu2 p2p borRed" style="box-sizing:border-box">
+            <h4>中间列表 div2</h4>
+            <p><b>float:left</b>请检查您的代理服务器设置或与网络</p>
+        </div>
+        <div class="thrColu2 p2p borRed" style="box-sizing:border-box">
+            <h4>右侧列表 div3</h4>
+            <p><b>float:right</b>请检查您的代理服务器设置或与网然而在许多情况下这并不理想——它使设计呆板。如果你能保证列中总是有相同数量的内容，这是可以的，但这并不总是如此——在很多类型的网站上，内容也会定期更改。
+                </p>
+        </div>
+        <div style="height:10px;clear:both;box-sizing:border-box"></div>
+        <div class="w100 p5 borRed" style="clear:both;box-sizing:border-box">
+            <p> 如果列都是相同的高度，它看起来会更好。但是也会出现问题，比如有些列过高会遮挡下面的内容</p>
+        </div>
+    </div>
+    <p>这个时候可以通过设置内容滚动来解决，或者尽可能的填充更高的高度来解决，</p>
+    <div class="w100 borBlue inliBlo mAuto p5">
+        <div class="thrColu2 p2p borRed" style="box-sizing:border-box">
+            <h4>左侧列表 div1</h4>
+            <p><b>float:left</b>请检查您的代理服务器设置或与网络。</p>
+        </div>
+         <div class="thrColu2 p2p borRed" style="box-sizing:border-box">
+            <h4>中间列表 div2</h4>
+            <p><b>float:left</b>请检查您的代理服务器设置或与网络</p>
+        </div>
+        <div class="thrColu2 p2p borRed" style="box-sizing:border-box;overflow:scroll">
+            <h4>右侧列表 div3</h4>
+            <p><b>float:right</b>请检查您的代理服务器设置或与网然而在许多情况下这并不理想——它使设计呆板。如果你能保证列中总是有相同数量的内容，这是可以的，但这并不总是如此——在很多类型的网站上，内容也会定期更改。
+                </p>
+        </div>
+        <div style="height:10px;clear:both;box-sizing:border-box"></div>
+        <div class="w100 p5 borRed" style="clear:both;box-sizing:border-box">
+            <p> 如果列都是相同的高度，它看起来会更好。</p>
+        </div>
+    </div>
+    <p><b>Tips:</b>虽然上面的方法可以解决一些问题，但是还是推荐使用 flex 来完成~</p>
+    <h4>清除浮动会变得复杂</h4>
+    <p>文章中建立的简单例子很容易理解，但是当布局变得更加复杂清理也会变得更加复杂。你需要确保所有的浮动都能尽快清除，以避免它们给内容带来麻烦。如果您没有一个方便的容器来进行清理，那么在必要的时候使用clearfix div。</p>
     <div class="tac mt10">
         <a class="btn1 mr30" href="javascript:void()" onclick="goLast()">上一篇 float</a>
         <a class="btn1 ml30" href="javascript:void()" onclick="goNext()">下一篇 填入内容</a>

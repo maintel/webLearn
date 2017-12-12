@@ -12,4 +12,9 @@
 .thrColu:nth-of-type(2){width: 32%;float: left;margin-left: 2%}
 .thrColu:nth-of-type(3){width: 32%;float: right}
 
+.thrColu2:nth-of-type(1){width: 32%;float: left}
+.thrColu2:nth-of-type(2){width: 32%;float: left;margin-left: 2%}
+.thrColu2:nth-of-type(3){width: 32%;float: right}
+.thrColu2{height: 200px};
+
 b{color: red}
