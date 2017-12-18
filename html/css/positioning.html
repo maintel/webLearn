@@ -1,0 +1,74 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>定位实例</title>
+    <link rel="stylesheet" type="text/css" href="../../res/css/myStyle1.css">
+    <link rel="stylesheet" href="../../res/css/common.css">
+    <link rel="stylesheet" href="../../res/css/positioning.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h2 class="tac mClear w100 topAlign ptb10 bg666">定位实例学习</h2>
+    <h4>列表消息盒子</h4>
+    <p>我们研究的第一个例子是一个经典的列表消息盒子，一个 你想在一块小区域包括许多信息时 常用的东西。这包括含有大信息量的apps，比如策略或战争游戏；比如从移动端的视角看网页，屏幕狭小、空间有限；比如紧凑的信息盒子，一个你可能想要放置许多信息而不占据整个用户界面的地方。我们简单的例子完成后就会像下面这样：</p>
+    <img src="../../res/img/tabbed-info-box.png" class="center2" alt="">
+    <p>接下来就通过代码来实现这个布局</p>
+    <section class="table-indicator">
+        <ul>
+            <li><a href="#" class="active">table1</a></li>
+            <li><a href="#">table2</a></li>
+            <li><a href="#">table3</a></li>
+        </ul>
+        <div>
+            <article>
+                <h4>table 1</h4>
+                <p>这是第一个标签卡内容页</p>
+                <p>这是第一个标签卡内容页</p>
+                <p>这是第一个标签卡内容页</p>
+                <p>这是第一个标签卡内容页</p>
+                <p>这是第一个标签卡内容页</p>
+            </article>
+            <article>
+                <h4>table 2</h4>
+                <p>这是第二个标签卡内容页</p>
+                <p>这是第二个标签卡内容页</p>
+                <p>这是第二个标签卡内容页</p>
+                <p>这是第二个标签卡内容页</p>
+                <p>这是第二个标签卡内容页</p>
+                <p>这是第二个标签卡内容页</p>
+                <p>这是第二个标签卡内容页</p>
+            </article>
+            <article>
+                <h4>table 3</h4>
+                <p>这是第一个标签卡内容页</p>
+                <p>这是第一个标签卡内容页</p>
+                <p>这是第一个标签卡内容页</p>
+                <p>这是第一个标签卡内容页</p>
+                <p>这是第一个标签卡内容页</p>
+                <p>这是第一个标签卡内容页</p>
+                <p>这是第一个标签卡内容页</p>
+            </article>
+        </div>
+    </section>    
+    <div class="tac mt10">
+        <a class="btn1 mr30" href="javascript:void()" onclick="goLast()">上一篇 定位</a>
+        <a class="btn1 ml30" href="javascript:void()" onclick="goNext()">下一篇 填入内容</a>
+    </section>
+    </div>
+</body>
+
+<script>
+    function goLast(){
+        location.href = "./float2.html"
+    }
+    function goNext(){
+        location.href = "填入连接"
+    }
+</script>
+
+</html>
