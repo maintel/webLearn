@@ -20,12 +20,12 @@
     <p>接下来就通过代码来实现这个布局</p>
     <section class="table-indicator">
         <ul>
-            <li><a href="#" class="active">table1</a></li>
-            <li><a href="#">table2</a></li>
-            <li><a href="#">table3</a></li>
+            <li><a href="javascript:void(0)" class="active">table1</a></li>
+            <li><a href="javascript:void(0)">table2</a></li>
+            <li><a href="javascript:void(0)">table3</a></li>
         </ul>
-        <div>
-            <article>
+        <div class="content">
+            <article class="show">
                 <h4>table 1</h4>
                 <p>这是第一个标签卡内容页</p>
                 <p>这是第一个标签卡内容页</p>
@@ -68,6 +68,28 @@
     }
     function goNext(){
         location.href = "填入连接"
+    }
+
+    var tabs = document.querySelectorAll(".table-indicator li a");
+    var contents = document.querySelectorAll(".content article");
+
+    var i = 0;
+    for (const tab of tabs) {
+        setTabHeader(tab,i);
+        i++;
+    }
+
+    function setTabHeader(tab,index){
+        tab.onclick = function(){
+            for(i = 0;i<tabs.length;i++){
+                if(tabs[i].getAttribute("class")){
+                    tabs[i].removeAttribute("class");
+                    contents[i].removeAttribute("class");
+                }
+            }
+            tab.setAttribute("class","active");
+            contents[index].setAttribute("class","show");
+        }
     }
 </script>
 
