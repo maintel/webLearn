@@ -17,3 +17,31 @@
 .table-indicator li a:focus, .table-indicator li a:hover{background-color: #a60000;color: white}
 /* css 语法 */
 .table-indicator li a.active{background-color: #a60000;color: white}
+
+
+label[for="toggle"]{
+    font-size: 3em;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+input[type="checkbox"]{position: absolute;top: -100px}
+
+aside{
+    background-color: #00b0e6;
+    color: white;
+    width: 360px;
+    height: 98%;
+    padding: 10px;
+    position: fixed;
+    top: 40px;
+    right: -370px;
+    transition: all 0.8s;
+}
+
+input[type=checkbox]:checked + aside{
+    right: 0px
+}
