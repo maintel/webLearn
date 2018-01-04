@@ -15,7 +15,8 @@
 <body>
     <h2 class="tac mClear w100 topAlign ptb10 bg666">FlexBox学习</h2>
     <hr>
-    <p>本页来讲我最爱用的布局——FlexBox。Flexbox 是一种新技术，但在如今各个浏览器都广泛支持的情况下，它已经开始准备广泛应用了。 Flexbox提供了工具，允许快速创建曾经被证明用CSS很难实现的一些复杂，灵活的布局和功能。 </p>
+    <p>本页来讲我最爱用的布局——FlexBox。Flexbox 是一种新技术，但在如今各个浏览器都广泛支持的情况下，它已经开始准备广泛应用了。 Flexbox提供了工具，允许快速创建曾经被证明用CSS很难实现的一些复杂，灵活的布局和功能。
+    </p>
     <hr>
     <h3>FlexBox 有什么优势</h3>
     <p>长久以来，唯一可用的且有稳定的跨浏览器兼容性的能用来构建 CSS 布局的工具只有 floats 和 positioning。它们是即可行，表现也不错的布局方案，但是在某些布局方面它们就有限制，并且难以实现。</p>
@@ -23,17 +24,57 @@
     <ul>
         <li>垂直居中父内容的里一块内容。</li>
         <li使容器的所有子项占用等量的可用宽度/高度，而不管有多少宽度/高度可用。</li>
-        <li>使多列布局中的所有列采用相同的高度，即使它们包含的内容量不同。</li>
+            <li>使多列布局中的所有列采用相同的高度，即使它们包含的内容量不同。</li>
     </ul>
     <p>比如下面的布局：</p>
     <div class="borBlue">
         <p>三列等宽布局</p>
+        <p>保持内容等宽需要设置 flex：0，以及 min-width:0</p>
         <div class="flex_w">
             <div>主轴（main axis）是沿着 flex 元素放置的方向延伸的轴（比如页面上的横向的行、纵向的列）。该轴的开始和结束被称为 main start 和 main end。</div>
             <div>交叉轴（cross axis）是垂直于 flex 元素放置方向的轴。该轴的开始和结束被称为 cross start 和 cross end。</div>
             <div>设置了 display: flex 的父元素被称之为 flex 容器（flex container）。</div>
         </div>
     </div>
+    <hr>
+    <h3>flex 模型说明</h3>
+    <p>当表现为 flex 模型时，它们沿着两个轴线来布局</p>
+    <img src="../../res/img/flex_terms.png" class="center2" alt="">
+    <ul>
+        <li>
+            <b>主轴（main axis）</b>是沿着 flex 元素放置的方向延伸的轴（比如页面上的横向的行、纵向的列）。该轴的开始和结束被称为 main start 和 main end。</li>
+        <li>
+            <b>交叉轴（cross axis）</b>是垂直于 flex 元素放置方向的轴。该轴的开始和结束被称为 cross start 和 cross end。</li>
+        <li>设置了 display: flex 的父元素被称之为
+            <b> flex 容器（flex container）</b>
+        </li>
+        <li>在 flex 容器中表现为柔性的盒子的元素被称之为
+            <b>flex 项（flex item）</b>
+        </li>
+    </ul>
+    <hr>
+    <h3>主轴方向</h3>
+    <p>主轴方向由 flex-direction 属性来确定，默认值是 row ，按照浏览器的默认语言方向排成一排，比如在中文中就是从左到右</p>
+    <p>有以下取值：</p>
+    <ul>
+        <li>水平排列：
+            <ul>
+                <li>
+                    <b>row</b> flex容器的主轴被定义为与文本方向相同。 主轴起点和主轴终点与内容方向相同。</li>
+                <li>
+                    <b>row-reverse</b> 表现和row相同，但是置换了主轴起点和主轴终点，比如中文从右到左</li>
+            </ul>
+        </li>
+
+        <li>竖直排列：
+            <ul>
+                <li>
+                    <b>column</b> flex容器的主轴和交叉轴相同。主轴起点与主轴终点和书写模式的前后点相同，比如中文从上到下</li>
+                <li>
+                    <b>column-reverse</b> 表现和column相同，但是置换了主轴起点和主轴终点，比如中文从下到上</li>
+            </ul>
+        </li>
+    </ul>
     <div class="tac mt10">
         <a class="btn1 mr30" href="javascript:void()" onclick="goLast()">上一篇 滑动隐藏实例</a>
         <a class="btn1 ml30" href="javascript:void()" onclick="goNext()">下一篇 填入内容</a>
@@ -41,10 +82,11 @@
 </body>
 
 <script>
-    function goLast(){
+    function goLast() {
         location.href = "./positioning2.html"
     }
-    function goNext(){
+
+    function goNext() {
         location.href = "填入连接"
     }
 </script>
