@@ -1,3 +1,9 @@
 .flex_w{display: flex}
 
 .flex_w div {padding: 10px;background-color: aqua;margin: 10px;flex: 1;min-width: 0}
+
+.flex_full_par{display: flex}
+
+.flex_full_par_sta{flex: 0;min-width: 120px}
+
+.flex_full_par_mat{flex:1;}

@@ -54,6 +54,13 @@ table,th,td{border-collapse: collapse}
 .borLBlue{border-left: #00b7ff 4px solid}
 .borRed{border: red 1px solid}
 
+/* 一般的测试用背景 */
+.commTestbg div{
+    padding: 5px;
+    background-color: #00b7ff;
+    margin: 10px;
+}
+
 /* 绝对定位居于顶部 */
 .topAlign{top: 0;left: 0; position: fixed;z-index: 999}
 

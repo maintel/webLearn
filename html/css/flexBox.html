@@ -75,6 +75,17 @@
             </ul>
         </li>
     </ul>
+    <h3>实现一些布局</h3>
+    <p>下面通过 flex 来实现一些布局</p>
+    <h4>充满剩余空间</h4>
+    <p>下面来实现一个一部分固定宽度，另外一部分充满剩余宽度的布局</p>
+    <div class="borBlue">
+        <p></p>
+        <div class="flex_full_par commTestbg">
+            <div class="flex_full_par_mat">而设置内容充满剩余空间则需要设置 flex：1 或任意大于0的数值，尝试改变窗体宽度会发现此部分宽度大小也会随之变化一直充满剩余父容器的宽度</div>
+            <div class="flex_full_par_sta">保持内容宽度不变需要设置 flex：0，以及 min-width为需要的值</div>
+        </div>
+    </div>
     <div class="tac mt10">
         <a class="btn1 mr30" href="javascript:void()" onclick="goLast()">上一篇 滑动隐藏实例</a>
         <a class="btn1 ml30" href="javascript:void()" onclick="goNext()">下一篇 填入内容</a>
