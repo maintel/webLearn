@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>js 测试测试</title>
+    <link rel="stylesheet" type="text/css" href="../../res/css/myStyle1.css">
+    <link rel="stylesheet" href="../../res/css/common.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h2 class="tac mClear w100 topAlign ptb10 bg666">这是标题</h2>
+    
+    <button onclick="replace()">正则替换</button>
+    <p id="testStr">测试字符串</p>
+    <p id="testStrRep">测试字符串</p>
+    <div class="tac mt10">
+        <a class="btn1 mr30" href="javascript:void()" onclick="goLast()">上一篇 填入内容</a>
+        <a class="btn1 ml30" href="javascript:void()" onclick="goNext()">下一篇 填入内容</a>
+    </div>
+</body>
+
+<script>
+    function goLast(){
+        location.href = "填入连接"
+    }
+    function goNext(){
+        location.href = "填入连接"
+    }
+
+    function replace(){
+      let p = document.getElementById("testStr")
+      let repHtml = document.getElementById("testStrRep")
+      let str = "一己之力|灭掉中国嘻哈圈，人称|——“平西王”"
+      p.innerHTML = str
+      console.log(str)
+      console.log(str.replace("|","<br/>"))
+      repHtml.innerHTML = str.replace(/\|/g,"<br/>&nbsp;&nbsp;&nbsp;&nbsp;")
+    }
+</script>
+
+</html>
