@@ -93,6 +93,18 @@
         <li><code>space-around</code>flex 项沿着主轴平均分布。</li>
         <li><code>space-between</code>flex 项平均间隔分布。</li>
     </ul>
+    <hr>
+    <h3>flex 项排序</h3>
+    <p>弹性盒子也有可以改变 flex 项的布局位置的功能，而不会影响到源顺序（即 dom 树里元素的顺序）。这也是传统布局方式很难做到的一点。</p>
+    <p>使用也很简单——<code>order</code>属性。</p>
+    <ul>
+        <li>所有 flex 项默认的<code>order</code>值是 0</li>
+        <li>order 值大的 flex 项比 order 值小的在显示顺序中更靠后</li>
+        <li>相同 order 值的 flex 项按源顺序显示。所以假如你有四个元素，其 order 值分别是2，1，1和0，那么它们的显示顺序就分别是第四，第二，第三，和第一。</li>
+        <li></li>
+    </ul>
+    <p>也可以给 order 设置负值使它们比值为 0 的元素排得更前面。</p>
+    
     <h3>实现一些布局</h3>
     <p>下面通过 flex 来实现一些布局</p>
     <h4>充满剩余空间</h4>

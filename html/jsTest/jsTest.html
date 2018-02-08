@@ -15,6 +15,7 @@
     <h2 class="tac mClear w100 topAlign ptb10 bg666">这是标题</h2>
     
     <button onclick="replace()">正则替换</button>
+    <button onclick="int()">int 格式化</button>
     <p id="testStr">测试字符串</p>
     <p id="testStrRep">测试字符串</p>
     <div class="tac mt10">
@@ -29,6 +30,12 @@
     }
     function goNext(){
         location.href = "填入连接"
+    }
+
+    function int(){
+        console.log(parseInt('-100'))
+        console.log( parseInt('-100') < 0)
+       
     }
 
     function replace(){
