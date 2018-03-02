@@ -18,10 +18,13 @@
     <button onclick="int()">int 格式化</button>
     <p id="testStr">测试字符串</p>
     <p id="testStrRep">测试字符串</p>
+    <button onclick="testWxHeadUrl()">检测是否是微信头像</button>    
+    <button onclick="testWxReplace()">替换</button>    
     <div class="tac mt10">
         <a class="btn1 mr30" href="javascript:void()" onclick="goLast()">上一篇 填入内容</a>
         <a class="btn1 ml30" href="javascript:void()" onclick="goNext()">下一篇 填入内容</a>
     </div>
+    <img src="http://wx.qlogo.cn/mmopen/MeYAJia759rXrSStqhBpZibwH9juxeREUjghZtG8CibZCyfibgY1NS7AhK4jG58zib1KHcW0LY83Wv7sBGp2Ofs95nyFpCeClm6DB/0" />
 </body>
 
 <script>
@@ -46,6 +49,18 @@
       console.log(str)
       console.log(str.replace("|","<br/>"))
       repHtml.innerHTML = str.replace(/\|/g,"<br/>&nbsp;&nbsp;&nbsp;&nbsp;")
+    }
+
+    function testWxHeadUrl(){
+        let wxUrl = "http://wx.qlogo.cn/mmopen/MeYAJia759rXrSStqhBpZibwH9juxeREUjghZtG8CibZCyfibgY1NS7AhK4jG58zib1KHcW0LY83Wv7sBGp2Ofs95nyFpCeClm6DB/0"
+        let test = /http:\/\/wx.qlogo.cn/
+        console.log(test.exec(wxUrl) != null && test.exec(wxUrl).index == 0)
+    }
+
+    function testWxReplace(){
+        let wxUrl = "\"http://wx.qlogo.cn/mmopen/MeYAJia759rXrSStqhBpZibwH9juxeREUjghZtG8CibZCyfibgY1NS7AhK4jG58zib1KHcW0LY83Wv7sBGp2Ofs95nyFpCeClm6DB/0\""
+        console.log(wxUrl)
+        console.log(wxUrl.replace(/"/g,""))
     }
 </script>
 
