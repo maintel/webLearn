@@ -1,0 +1,124 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="../../lib/jquery-3.3.1.min.js"></script>
+    <script src="../../lib/dialog-plus.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        #doc {
+            height: 560px;
+        }
+        
+        #doc iframe {
+            display: block;
+            width: 350px;
+            border: 1px solid #CCC;
+            height: 350px;
+            margin: 100px auto 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        !/http/.test(location.protocol) && document.write('<h1>请在服务端预览（部分浏览器本地 iframe 会跨域无权限）</h1>');
+    </script>
+    <div>
+        <button id="test" >test</button>
+        
+    </div>
+
+    <table 
+    id="table"
+    border="1"
+            cellspacing="5"
+            cellpadding="10"
+            style="display:none;width:100px"
+            >
+            <caption>o 标题在这里</caption>
+            <colgroup>
+                <col style="background-color:blue">
+                <col style="background-color: red">
+                <col style="background-color: yellow">
+            </colgroup>
+            <tr >
+                <th>ID</th>
+                <th>绰号</th>
+                <th>名言</th>
+                <th>操作</th> 
+            </tr>        
+            <tr>
+                <td class="tac">longDD</td>
+                <td>人高马大longdd</td>
+                <td>女王不要B阴影啊！</td>
+                <td><button onclick="check()" >选择</button></td>
+            </tr>
+            <tfoot>
+                <td>yang</td>
+                <td>彬彬有礼皮鞋杨</td>
+                <td>CNM,NMB,NGSB!</td>
+            </tfoot>
+            <tr>
+                <td class="tac">hao</td>
+                <td>正人君子陈志豪</td>
+                <td>给我幽鬼不赢砍手！</td>
+            </tr>
+            
+            <tr>
+                <td class="tac">820</td>
+                <td>伶牙俐齿乌溜溜</td>
+                <td>优势不要打盾！</td>
+            </tr>
+            
+
+        </table>
+
+</body>
+
+<script>
+  var d
+  $('#test').on('click',function(){
+    console.log("点击了啊")
+    // console.log($('#table').html)
+    d = dialog({
+      width:700,
+      height:400,
+      quickClose: true,
+                    id: 'test-dialog',
+                    title: '请选择一篇文章',
+                    content: $('#table'),
+                    // url: '../html_table.html',
+                    quickClose: true,
+                    onshow: function() {
+                        console.log('onshow');
+                    },
+                    oniframeload: function() {
+                        console.log('oniframeload');
+                    },
+                    onclose: function() {
+                        if (this.returnValue) {
+                            console.log(this.returnValue)
+                        }
+                        console.log('onclose');
+                    },
+                    onremove: function() {
+                        console.log('onremove');
+                    }
+                })
+                .showModal();
+            return false;
+  })
+
+  function check(){
+    d.close("我的妈呀！！！")
+  }
+</script>
+
+</html>

@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>表格</title>
+        <script src="../lib/dialog-plus.js"></script>
         <style>
         .tac{
             text-align: center
@@ -24,17 +25,19 @@
             <tr >
                 <th>ID</th>
                 <th>绰号</th>
-                <th>名言</th> 
+                <th>名言</th>
+                <th>操作</th> 
             </tr>        
             <tr>
                 <td class="tac">longDD</td>
                 <td>人高马大longdd</td>
                 <td>女王不要B阴影啊！</td>
+                <td><button onclick="check()" >选择</button></td>
             </tr>
             <tfoot>
                 <td>yang</td>
                 <td>彬彬有礼皮鞋杨</td>
-                <td>CNM,NMB,WCNM!</td>
+                <td>CNM,NMB,NGSB!</td>
             </tfoot>
             <tr>
                 <td class="tac">hao</td>
@@ -112,4 +115,18 @@
             </tr>
         </table>
     </body>
+    <script>
+         console.log("aaaa")
+        try {
+           
+            var dialog = top.dialog.get(window);
+            // console.log(dialog)
+        } catch (error) {
+            // console.log(error)            
+        }
+        function check(){
+            dialog.close("我的妈呀")
+        }
+        
+    </script>
 </html>
