@@ -19,7 +19,9 @@
     <p id="testStr">测试字符串</p>
     <p id="testStrRep">测试字符串</p>
     <button onclick="testWxHeadUrl()">检测是否是微信头像</button>    
-    <button onclick="testWxReplace()">替换</button>    
+    <button onclick="testWxReplace()">替换</button>  
+    
+    <button onclick="check()">test</button>
     <div class="tac mt10">
         <a class="btn1 mr30" href="javascript:void()" onclick="goLast()">上一篇 填入内容</a>
         <a class="btn1 ml30" href="javascript:void()" onclick="goNext()">下一篇 填入内容</a>
@@ -39,6 +41,12 @@
         console.log(parseInt('-100'))
         console.log( parseInt('-100') < 0)
        
+    }
+
+    function check(){
+        let name = 'WaterPriceInfo'
+        let test = new RegExp(name)
+      console.log(test.exec('http://test.iwaterdata.com/iwaterAppWeb/reactProject/html/waterMeter.html#/WaterPriceInfo?waterCorpId=22'))
     }
 
     function replace(){

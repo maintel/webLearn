@@ -32,6 +32,8 @@
     </script>
     <div>
         <button id="test" >test</button>
+        <button id="test2" >test</button>
+        <button id="test3" >跳转</button>
         
     </div>
 
@@ -116,9 +118,38 @@
             return false;
   })
 
+  $('#test2').on('click',function(){
+      console.log(location.href)
+      console.log(location.search)
+      console.log(getQueryString('WaterPriceInfo'))
+   
+  })
+
+    $('#test3').on('click',function(){
+        window.open("http://122.224.204.29/autoClose.html");
+  })
+
   function check(){
     d.close("我的妈呀！！！")
   }
+
+
+  function getQueryString (name) {
+    // 普通的参数
+    let queryResult = 'http://test.iwaterdata.com/iwaterAppWeb/reactProject/html/waterMeter.html#/WaterPriceInfo?waterCorpId=22'.match(new RegExp('[\\?\&]' + name + '=([^\&]+)', 'i'))
+    // location的参数
+    let locationResult = 'http://test.iwaterdata.com/iwaterAppWeb/reactProject/html/waterMeter.html#/WaterPriceInfo?waterCorpId=22'.substr(location.href.lastIndexOf('#/')).match(new RegExp("[\?\&]" + name + '=([^\&]+)', 'i'))
+    // 优先使用location的参数
+    if (locationResult != null && locationResult.length > 0) {
+        return locationResult[1];
+    }
+    if (queryResult != null && queryResult.length > 0) {
+        return queryResult[1]
+    }
+    return ''
+}
+
+
 </script>
 
 </html>
