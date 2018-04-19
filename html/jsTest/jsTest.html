@@ -22,6 +22,9 @@
     <button onclick="testWxReplace()">替换</button>  
     
     <button onclick="check()">test</button>
+    <button onclick="encode()">encodeURIComponent</button>    
+    <button onclick="decode()">decodeURIComponent</button>
+    
     <div class="tac mt10">
         <a class="btn1 mr30" href="javascript:void()" onclick="goLast()">上一篇 填入内容</a>
         <a class="btn1 ml30" href="javascript:void()" onclick="goNext()">下一篇 填入内容</a>
@@ -30,6 +33,17 @@
 </body>
 
 <script>
+
+
+    function encode(){
+        console.log(encodeURIComponent('新建“一户一表‘申请’啊啊啊”'))
+        console.log(encodeURIComponent("'''''"))
+    }
+
+    function decode(){
+        console.log(decodeURIComponent(''))
+    }
+
     function goLast(){
         location.href = "填入连接"
     }
@@ -43,10 +57,15 @@
        
     }
 
-    function check(){
+    function check2(){
         let name = 'WaterPriceInfo'
         let test = new RegExp(name)
       console.log(test.exec('http://test.iwaterdata.com/iwaterAppWeb/reactProject/html/waterMeter.html#/WaterPriceInfo?waterCorpId=22'))
+    }
+
+    function check(){
+        let test = new RegExp(/^imge\//)
+        console.log(test.test('imge/imgeadad/imge/jpeg//'))
     }
 
     function replace(){

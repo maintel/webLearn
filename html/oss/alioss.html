@@ -1,0 +1,51 @@
+
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>标题</title>
+    <link rel="stylesheet" type="text/css" href="../../res/css/myStyle1.css">
+    <link rel="stylesheet" href="../../res/css/common.css">
+    <link rel="stylesheet" type="text/css" href="https://g.alicdn.com/de/prismplayer/2.6.0/skins/default/aliplayer-min.css" />
+    <script charset="utf-8" type="text/javascript" src="https://g.alicdn.com/de/prismplayer/2.6.0/aliplayer-min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h2 class="tac mClear w100 topAlign ptb10 bg666">这是标题</h2>
+    
+    <div  class="prism-player" id="J_prismPlayer"></div>
+</body>
+
+<script>
+    var player = new Aliplayer({
+            id: 'J_prismPlayer',
+            width: '100%',
+            autoplay: false,
+            //支持播放地址播放,此播放优先级最高
+            source : 'http://zpecstest.oss-cn-beijing.aliyuncs.com/20180330111510450294.mp4?Expires=1523607828&OSSAccessKeyId=STS.MCoxAXSonW9E3hZ2Xg2LsWRKX&Signature=Pnq%2BISsEwQQxnHL1MHtFp39BQ%2FE%3D&security-token=CAIS6AF1q6Ft5B2yfSjIrIDaM%2FvsvrBP4PuuMU7r1lgyPsNfuJfgujz2IHtFfnFrAugftfk%2BlG9V6PwYlq9uUJJfZECc61yzT1cTo22beIPkl5Gfz95t0e%2BIewW6Dxr8w7WhAYHQR8%2FcffGAck3NkjQJr5LxaTSlWS7OU%2FTL8%2BkFCO4aRQ6ldzFLKc5LLw950q8gOGDWKOymP2yB4AOSLjIx6lYm1jMgsfjlmZ3EtUePtjCglL9J%2FbaWC4O%2FcsxhMK14V9qIx%2BFsfsLDqnULukISr%2Fwu1fcZqGeY44%2FHWUM6%2FRKKI1UrIW2TxMQSGoABY9VXqsoQ2sjFRRkhmo90rp%2B4U48xU5V2efQ59ibyiX9HdBYwqEXZA%2FumZGK7X2uShhgeT08WM%2FoQpMJZNIbzeRpdKg4mLejmh%2BW1xbL2XMLoUW%2FrhK3osPjvi7dwldHAkDM8EFJvxWE1msKQHprTIe6LGuhHSo4pzc39g32ve9Q%3D',
+            // //播放方式二：点播用户推荐
+            // vid : '1e067a2831b641db90d570b6480fbc40',
+            // playauth : '',
+            // cover: 'http://liveroom-img.oss-cn-qingdao.aliyuncs.com/logo.png',            
+            // //播放方式三：仅MPS用户使用
+            // vid : '1e067a2831b641db90d570b6480fbc40',
+            // accId: '',
+            // accSecret: '',
+            // stsToken: '',
+            // domainRegion: '',
+            // authInfo: '',
+            // //播放方式四：使用STS方式播放
+            // vid : '1e067a2831b641db90d570b6480fbc40',
+            // accessKeyId: '',
+            // securityToken: '',
+            // accessKeySecret: ''
+            },function(player){
+                console.log('播放器创建好了。')
+           });
+</script>
+
+</html>
