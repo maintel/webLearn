@@ -6,6 +6,7 @@
     <title>js 测试测试</title>
     <link rel="stylesheet" type="text/css" href="../../res/css/myStyle1.css">
     <link rel="stylesheet" href="../../res/css/common.css">
+    <script charset="utf-8" type="text/javascript"  src="../../lib/md5.main.js" ></script>
     <style>
 
     </style>
@@ -20,6 +21,10 @@
     <p id="testStrRep">测试字符串</p>
     <button onclick="testWxHeadUrl()">检测是否是微信头像</button>    
     <button onclick="testWxReplace()">替换</button>  
+
+    <button onclick="test()">测试</button>  
+
+
     
     <button onclick="check()">test</button>
     <button onclick="encode()">encodeURIComponent</button>    
@@ -33,6 +38,29 @@
 </body>
 
 <script>
+
+    function test(){
+        // console.log(sumMoney(8.7,0))
+        // console.log(sumMoney("17.4",0))
+        // console.log(accAdd("17.4",0))
+        // console.log(accAdd("8.7",0))
+        //231242.44+281898.31+190742.02+197754.05
+
+        // console.log(Subtr(sumMoney("17.4",0) , "0"))
+
+        // getHttpSign()
+        // console.log(telCheck("15225137663"))
+        checkTel("15225137663")
+    }
+
+
+    function checkTel(number){
+
+        if(!/^((0\d{2,3}-\d{7,8})|(1[3456789]\d{9}))$/.test(number)){
+            alert('固定电话有误，请重填');
+        return false;
+        }
+    }
 
 
     function encode(){
@@ -89,6 +117,103 @@
         console.log(wxUrl)
         console.log(wxUrl.replace(/"/g,""))
     }
+
+    function Subtr(arg1, arg2) {
+        var r1, r2, m, n;
+        try {
+            r1 = arg1.toString().split(".")[1].length
+        } catch (e) {
+            r1 = 0
+        }
+        try {
+            r2 = arg2.toString().split(".")[1].length
+        } catch (e) {
+            r2 = 0
+        }
+        m = Math.pow(10, Math.max(r1, r2));
+        //last modify by deeka
+        //动态控制精度长度
+        n = (r1 >= r2) ? r1 : r2;
+        return ((arg1 * m - arg2 * m) / m).toFixed(2);
+    }
+
+    function telCheck(mobile) {
+    var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(19[0-9]{1})|(17[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        if (!myreg.test(mobile)) {
+            return false;
+        }
+    return true;
+    }
+
+    /**
+    * 计算金额累加
+    * @param a
+    * @param b
+    * @return {number}
+    */
+    function sumMoney(a, b) {
+        console.log(parseFloat(a * 100))
+        return (Math.floor((parseFloat(a * 100).toFixed(2))+ parseFloat(b * 100).toFixed(2))/100).toFixed(2)
+    }
+
+    /**
+ ** 加法函数，用来得到精确的加法结果
+ ** 说明：javascript的加法结果会有误差，在两个浮点数相加的时候会比较明显。这个函数返回较为精确的加法结果。
+ ** 调用：accAdd(arg1,arg2)
+ ** 返回值：arg1加上arg2的精确结果
+ **/
+function accAdd(arg1, arg2) {
+    var r1, r2, m, c;
+    try {
+        r1 = arg1.toString().split(".")[1].length;
+    }
+    catch (e) {
+        r1 = 0;
+    }
+    try {
+        r2 = arg2.toString().split(".")[1].length;
+    }
+    catch (e) {
+        r2 = 0;
+    }
+    c = Math.abs(r1 - r2);
+    m = Math.pow(10, Math.max(r1, r2));
+    if (c > 0) {
+        var cm = Math.pow(10, c);
+        if (r1 > r2) {
+            arg1 = Number(arg1.toString().replace(".", ""));
+            arg2 = Number(arg2.toString().replace(".", "")) * cm;
+        } else {
+            arg1 = Number(arg1.toString().replace(".", "")) * cm;
+            arg2 = Number(arg2.toString().replace(".", ""));
+        }
+    } else {
+        arg1 = Number(arg1.toString().replace(".", ""));
+        arg2 = Number(arg2.toString().replace(".", ""));
+    }
+    return (arg1 + arg2) / m;
+}
+ 
+//给Number类型增加一个add方法，调用起来更加方便。
+Number.prototype.add = function (arg) {
+    return accAdd(arg, this);
+};
+
+    function getHttpSign(){
+        //apiType=APP&appVersion=3.0.14&clientType=android&device=MX5&deviceId=48b4927cdffbc5cb2130aae0c3c33798&latitude=39.997398&longitude=116.419057&mobile=17600299932&nonce=858&platform=baidu&sdkVersion=22&timestamp=1526368693&type=3&waterCorpId=233&key=41dce5b3f435c6129a2d967eb7bb9676
+        var data = {"device":"MX5","deviceId":"48b4927cdffbc5cb2130aae0c3c33798","clientType":"android","longitude":116.419057,"mobile":"17600299932","timestamp":1526368693,"platform":"baidu","appVersion":"3.0.14","sdkVersion":22,"latitude":39.997398,"apiType":"APP","waterCorpId":233,"type":"3","nonce":858}
+        //"sign":"911D47E460A9CFAA6716AE2FAF06878F"
+        var sdic=Object.keys(data).sort();
+        var order = ""
+        for(ki in sdic){                     
+            console.log(sdic[ki]+":"+data[sdic[ki]])
+            order = order + sdic[ki] + "=" + data[sdic[ki]] + "&"
+        }
+        order = order + "key=41dce5b3f435c6129a2d967eb7bb9676"
+        console.log(order)
+        console.log(md5(order).toUpperCase())
+    }
+
 </script>
 
 </html>
