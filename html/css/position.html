@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="../../res/css/position_html_css.css">
     <style>
     td{border: #999999 1px solid;padding: 3px}
+
+    .fixedBR1{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: #f70d0d 2px solid;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: #44ff44;
+    background-color: #ffffff;
+}
     </style>
 </head>
 
@@ -52,8 +64,10 @@
     </div>
     <h4>fixed 绝对定位</h4>
     <p>一个固定定位（position属性的值为fixed）元素会相对于视窗来定位，这意味着即便页面滚动，它还是会停留在相同的位置。和 relative 一样， top 、 right 、 bottom 和 left 属性都可用。</p>
-    <div class="fixedBR">
+    <div class="fixedBR1">
         绝对定位
+
+        <input>请输入</input>
     </div>
     <p>可以看到右下角的一个浮动窗口，随着页面滑动一直定位在右下角,同样的还有顶部的标题栏，它也会随着窗口滑动固定在顶部</p>
     <p>一个固定定位元素不会保留它原本在页面应有的空隙即<b>脱离文档流</b>。</p>
